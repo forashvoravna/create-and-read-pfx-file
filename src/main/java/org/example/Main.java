@@ -69,7 +69,7 @@ public class Main {
             }
         }
 
-        char[] password = "24061996".toCharArray();
+        char[] password = "********".toCharArray();
 
         try (
                 FileInputStream fis = new FileInputStream("C:\\Users\\user\\Desktop\\PFX_file/"+getFileName()+".pfx")) {
@@ -92,9 +92,9 @@ public class Main {
         } catch (KeyStoreException e) {
             throw new RuntimeException(e);
         }
-        char[] password = "24061996".toCharArray();
+        char[] password = "********".toCharArray();
 
-        try (FileInputStream fis = new FileInputStream("C:\\DSKEYS\\DS4997124990002_Fazolat_Mukimova_24061996.pfx")) {
+        try (FileInputStream fis = new FileInputStream("C:\\DSKEYS\\DS4997124990002.pfx")) {
             keyStore.load(fis, password);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
